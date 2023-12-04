@@ -1,3 +1,4 @@
+// program to solve the problem of tower of hanoi.
 #include<iostream>
 
 void towerOfHanoi(int n,char A,char B,char C){
@@ -12,7 +13,9 @@ void towerOfHanoi(int n,char A,char B,char C){
 }
 int main()
 {
-    int n=3;
+    // int n=3;
+    int n;
+    std::cin>>n;
 
     towerOfHanoi(n,'A','B','C');
 

@@ -6,7 +6,7 @@ int jos(int n, int k)
 	{
 		return 0;
 	}
-	return ((k+jos(n - 1, k))%n);
+	return ((k + jos(n - 1, k)) % n);
 }
 
 int main()

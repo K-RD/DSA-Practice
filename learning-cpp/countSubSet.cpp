@@ -6,7 +6,6 @@ int countSubSet(int arr[], int n, int sum)
 	{
 		return ((sum == 0) ? 1 : 0);
 	}
-
 	return countSubSet(arr, n - 1, sum) + countSubSet(arr, n - 1, sum - arr[n - 1]);
 }
 

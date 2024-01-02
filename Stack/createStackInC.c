@@ -57,7 +57,11 @@ void printStack(struct MyStack *stack){
     }
     printf("\n");
 }
-
+void destroyStack(struct MyStack *stack) {
+    free(stack->arr); // Free the dynamically allocated memory for the stack array
+    stack->size = 0;
+    stack->top = -1;
+}
 
 int main() {
     struct MyStack stack;
@@ -80,6 +84,8 @@ int main() {
     printf("Size: %d\n", size(&stack));
 
     printStack(&stack);
+
+    destroyStack(&stack);
 
     return 0;
 }

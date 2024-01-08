@@ -1,5 +1,12 @@
 *
 !/**/
+# !*/*.*/
 !*.*
+!.*
 *.bin
+!GFG
+!learning-cpp
+!stack
+!*/*.*
 .DS_Store
+!learning-cpp

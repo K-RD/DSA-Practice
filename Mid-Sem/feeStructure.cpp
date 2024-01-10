@@ -12,13 +12,13 @@
 #include <iostream>
 using namespace std;
 
-int admissionFee;
-int tuitionFee;
-int registrationFee;
-int examFee;
-int hostelFee;
-int messFee;
-int total;
+int admissionFee = 0;
+int tuitionFee = 0;
+int registrationFee = 0;
+int examFee = 0;
+int hostelFee = 0;
+int messFee = 0;
+int total = 0;
 
 void yearlyFee(int year)
 {
@@ -40,16 +40,19 @@ void yearlyFee(int year)
         cout << "Invalid year" << endl;
     }
     cout << "Admission Fee: " << admissionFee << endl;
+    cout << "Registration Fee: " << registrationFee << endl;
 }
 
 void categoryFee(int category)
 {
     if (category == 1)
     {
+        examFee = 7400;
         tuitionFee = 120;
     }
     else if (category == 2)
     {
+        examFee = 1400;
         tuitionFee = 0;
     }
     else
@@ -57,13 +60,11 @@ void categoryFee(int category)
         cout << "Invalid category" << endl;
     }
 
-    examFee = 7400;
     hostelFee = 9600;
     messFee = 33600;
     total = admissionFee + tuitionFee + registrationFee + examFee + hostelFee + messFee;
 
     cout << "Tuition Fee: " << tuitionFee << endl;
-    cout << "Registration Fee: " << registrationFee << endl;
     cout << "Exam Fee: " << examFee << endl;
     cout << "Hostel Fee: " << hostelFee << endl;
     cout << "Mess Fee: " << messFee << endl;
@@ -75,8 +76,7 @@ int main()
     int year, category;
     cout << "Please enter your current year (1-4): ";
     cin >> year;
-    cout << endl
-         << "Please enter your category \n(1 for GENERAL or OBC, 2 for SC or ST)\t: ";
+    cout << "Please enter your category \n(1 for GENERAL or OBC, 2 for SC or ST)\t: ";
     cin >> category;
 
     yearlyFee(year);

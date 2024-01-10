@@ -22,27 +22,41 @@ int total;
 
 void yearlyFee(int year)
 {
-    if(year==1 || year==3){
+    if (year == 1)
+    {
         admissionFee = 10;
-    }else if(year==2 || year==4){
+        registrationFee = 2100;
+    }
+    else if (year == 3)
+    {
+        admissionFee = 10;
+    }
+    else if (year == 2 || year == 4)
+    {
         admissionFee = 0;
-    }else{
+    }
+    else
+    {
         cout << "Invalid year" << endl;
     }
-    cout << "Admission Fee: "<<admissionFee << endl;
+    cout << "Admission Fee: " << admissionFee << endl;
 }
 
 void categoryFee(int category)
 {
-    if(category==1){
+    if (category == 1)
+    {
         tuitionFee = 120;
-    }else if(category==2){
+    }
+    else if (category == 2)
+    {
         tuitionFee = 0;
-    }else{
+    }
+    else
+    {
         cout << "Invalid category" << endl;
     }
 
-    registrationFee = 2100;
     examFee = 7400;
     hostelFee = 9600;
     messFee = 33600;

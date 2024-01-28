@@ -1,3 +1,5 @@
+// Traversal of array using function.
+
 #include <stdio.h>
 
 void traversal(int *, int);
@@ -13,8 +15,8 @@ int main()
 
 void traversal(int *array, int size)
 {
-    printf("the address of array variabl is %p \n", array);
-    printf("the value of array variabl is %d \n", *array);
+    printf("the address of array variable is %p \n", array);
+    printf("the value of array variable is %d \n", *array);
     for (int i = 0; i < size; i++)
     {
         printf("arr[%d] = %d\n", i, array[i]);

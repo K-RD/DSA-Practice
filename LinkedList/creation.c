@@ -18,6 +18,25 @@ void printElements(struct node *n)
     }
 }
 
+void insertion(struct node *n, int valBefore, int valToBeInserted)
+{
+    while (n->next != NULL)
+    {
+        if (n->data == valBefore)
+        {
+            struct node *newNode = (struct node *)malloc(sizeof(struct node));
+            newNode->data = valToBeInserted;
+            newNode->next = n->next;
+            n->next = newNode;
+            n = n->next;
+        }
+        else
+        {
+            n = n->next;
+        }
+    }
+}
+
 int main()
 {
     struct node *head, *first, *second, *third, *last;
@@ -53,7 +72,15 @@ int main()
     (*last).data = 50;
     (*last).next = NULL;
 
-    // Printing all elements.
+    // Printing all elements before inserting 25.
+    printf("\nAll the elements of the Linked List before inserting 25.\n");
+    printElements(head);
+
+    // Inserting value 25 after 20.
+    insertion(head, 20, 25);
+
+    // Printing all elements after inserting 25.
+    printf("\nAll the elements of the Linked List after inserting 25.\n");
     printElements(head);
 
     return 0;

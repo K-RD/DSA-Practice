@@ -1,4 +1,4 @@
-### DSA
+# DSA
 This readme contains the list of all the question whose code is written topic wise.I have practices these question during my DSA preparation.
 
 ## Array
@@ -7,8 +7,18 @@ This readme contains the list of all the question whose code is written topic wi
 - [x] Searching an element in an array.
 
 ## LinkedList
-
+### Singly Linked List
 - [x] Insertion of elements in a linked list. 
+- [ ] Deletion of elements from a linked list.
+- [ ] Searching an element in a linked list.
+
+### Doubly Linked List
+- [ ] Insertion of elements in a linked list.
+- [ ] Deletion of elements from a linked list.
+- [ ] Searching an element in a linked list.
+
+### Circular Linked List
+- [ ] Insertion of elements in a linked list.
 - [ ] Deletion of elements from a linked list.
 - [ ] Searching an element in a linked list.
 

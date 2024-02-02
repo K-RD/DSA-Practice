@@ -1,4 +1,4 @@
-// Implementing Linked List using c programming language.
+// Implementing singly Linked List using c programming language.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,7 +11,7 @@ struct node
 
 void printElements(struct node *n)
 {
-    while ((*n).next != NULL)
+    while (n != NULL)
     {
         printf("element: %d \n", (*n).data);
         n = n->next;
@@ -20,7 +20,7 @@ void printElements(struct node *n)
 
 void insertion(struct node *n, int valBefore, int valToBeInserted)
 {
-    while (n->next != NULL)
+    while (n != NULL)
     {
         if (n->data == valBefore)
         {

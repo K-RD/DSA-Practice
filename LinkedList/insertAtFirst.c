@@ -29,11 +29,11 @@ void printAllElements()
 {
     node *n = head;
 
-    do
+    while (n != NULL)
     {
         printf("Element : %d \n", n->data);
         n = n->next;
-    } while (n->next != NULL);
+    }
 }
 
 int tempMain()

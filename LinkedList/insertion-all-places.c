@@ -113,14 +113,6 @@ int main()
     // Function to print all elements of the linked list.
     printAllElements(head);
 
-    // insert a node after third node.
-    // insertAfterNode(struct node *previousNode, int data);
-    printf("\nInserting 45 after third node.\n");
-    insertAfterNode(third, 45);
-
-    // Function to print all elements of the linked list.
-    printAllElements(head);
-
     // Calling insertInBetween function to insert 25 at index 3 in the linked list.
     // insertInBetween(struct node *head, int data, int index);
     printf("\nInserting 25 at index 3 in the linked list.\n");
@@ -133,6 +125,14 @@ int main()
     // insertAtEnd(struct node *head, int data);
     printf("\nInserting 60 at the end of linked list.\n");
     head = insertAtEnd(head, 60);
+
+    // Function to print all elements of the linked list.
+    printAllElements(head);
+
+    // insert a node after third node.s
+    // insertAfterNode(struct node *previousNode, int data);
+    printf("\nInserting node containing 45 after node containing 40.\n");
+    insertAfterNode(third, 45);
 
     // Function to print all elements of the linked list.
     printAllElements(head);

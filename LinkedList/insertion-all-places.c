@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Declaring the node structure.
 struct node
 {
     int data;
@@ -26,6 +27,7 @@ void printAllElements(struct node *head)
     printf("\n");
     printf("\n");
 }
+
 // case 1: Inserting at the beginning of the linked list.
 struct node *insertAtBeginning(struct node *head, int data)
 {

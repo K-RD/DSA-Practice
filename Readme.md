@@ -9,18 +9,18 @@ This readme contains the list of all the question whose code is written topic wi
 ## LinkedList
 ### Singly Linked List
 - [x] Insertion of elements in a linked list. 
-- [ ] Deletion of elements from a linked list.
-- [ ] Searching an element in a linked list.
+- [x] Deletion of elements from a linked list.
+- [x] Searching an element in a linked list.
 
 ### Doubly Linked List
-- [ ] Insertion of elements in a linked list.
-- [ ] Deletion of elements from a linked list.
-- [ ] Searching an element in a linked list.
+- [x] Insertion of elements in a linked list.
+- [x] Deletion of elements from a linked list.
+- [x] Searching an element in a linked list.
 
 ### Circular Linked List
-- [ ] Insertion of elements in a linked list.
-- [ ] Deletion of elements from a linked list.
-- [ ] Searching an element in a linked list.
+- [x] Insertion of elements in a linked list.
+- [x] Deletion of elements from a linked list.
+- [x] Searching an element in a linked list.
 
 ## Stack
 

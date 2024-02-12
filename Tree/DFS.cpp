@@ -33,6 +33,18 @@ void preorder(struct node *n)
     preorder(n->right);
 }
 
+// In-Order Traversal.
+void inorder(struct node *n)
+{
+    if (n == NULL)
+    {
+        return;
+    }
+    inorder(n->left);
+    cout << n->data << "\t";
+    inorder(n->right);
+}
+
 int main()
 {
     // Declaring the root of the tree.
@@ -48,7 +60,13 @@ int main()
     root->right->left = new node(6);
     root->right->right = new node(7);
 
+    // Calling function to print preorder traversal of the tree.
+    printf("\nPrinting the preorder of the tree:: \n");
     preorder(root);
+
+    // Calling function to print in-order traversal of the tree.
+    printf("\nPrinting the in-order of the tree:: \n");
+    inorder(root);
 
     return 0;
 }

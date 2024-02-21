@@ -32,6 +32,9 @@ This readme contains the list of all the question whose code is written topic wi
 
 ## Queue
 ## Tree
+- [x] Tree implementation in c & cpp.
+- [x] Binary Tree Implementation in c & cpp.
+- [x] DFS ( Inorder, Preorder, Postorder) Traversal implementation in c & cpp.
 ## Graph
 ## Sorting
 ## Searching

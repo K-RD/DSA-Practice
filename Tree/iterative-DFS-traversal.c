@@ -83,17 +83,6 @@ struct treeNode *newNode(int val)
     return temp;
 }
 
-// Function to do preorder traversal in tree.
-void preorder(struct treeNode *n)
-{
-    if (n == NULL)
-    {
-        return;
-    }
-    printf("%d\t", n->data);
-    preorder(n->left);
-    preorder(n->right);
-}
 
 int main()
 {

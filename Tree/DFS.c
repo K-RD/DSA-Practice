@@ -37,6 +37,30 @@ void preorder(struct node *n)
     preorder(n->right);
 }
 
+// Function to print the in-order traversal of the tree.
+void inorder(struct node *n)
+{
+    if (n == NULL)
+    {
+        return;
+    }
+    inorder(n->left);
+    printf("%d\t", n->data);
+    inorder(n->right);
+}
+
+// Function to print the post order traversal of the tree.
+void postorder(struct node *n)
+{
+    if (n == NULL)
+    {
+        return;
+    }
+    postorder(n->left);
+    postorder(n->right);
+    printf("%d\t", n->data);
+}
+
 int main()
 {
     // Declaring the root of the tree.
@@ -52,7 +76,17 @@ int main()
     root->right->left = newNode(6);
     root->right->right = newNode(7);
 
+    // Calling function to print preorder traversal of the tree.
+    printf("\nPrinting the preorder of the tree:: \n");
     preorder(root);
+
+    // Calling function to print in-order traversal of the tree.
+    printf("\nPrinting the in-order of the tree:: \n");
+    inorder(root);
+
+    // Calling function to print post-order traversal of the tree.
+    printf("\nPrinting the post-order of the tree:: \n");
+    postorder(root);
 
     return 0;
 }

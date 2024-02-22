@@ -73,6 +73,31 @@ void preOrderTraversal(struct treeNode *root)
     }
 }
 
+// In-order traversal function.
+void inOrderTraversal(struct treeNode *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    struct treeNode *current = root;
+    struct stackNode *stack = NULL;
+
+    while (current != NULL || stack != NULL)
+    {
+        while (current != NULL)
+        {
+            push(&stack, current);
+            current = current->left;
+        }
+
+        current = pop(&stack);
+        printf("%d\t", current->data);
+
+        current = current->right;
+    }
+}
+
 // Function to create new treeNode.
 struct treeNode *newNode(int val)
 {
@@ -82,7 +107,6 @@ struct treeNode *newNode(int val)
     temp->right = NULL;
     return temp;
 }
-
 
 int main()
 {
@@ -99,8 +123,11 @@ int main()
     root->right->left = newNode(60);
     root->right->right = newNode(70);
 
-    printf("calling preOrderTraversal function.\n");
+    printf("\ncalling preOrderTraversal function.\n");
     preOrderTraversal(root);
+
+    printf("\ncalling inOrderTraversal function.\n");
+    inOrderTraversal(root);
 
     return 0;
 }

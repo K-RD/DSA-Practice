@@ -108,6 +108,41 @@ struct treeNode *newNode(int val)
     return temp;
 }
 
+// Post order traversal function
+void postOrderTraversal(struct treeNode *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+
+    struct treeNode *current = root;
+    struct stackNode *st1 = NULL;
+    push(&st1, current);
+    struct stackNode *st2 = NULL;
+
+    while (st1 != NULL)
+    {
+        current = pop(&st1);
+        push(&st2, current);
+        if (current->left != NULL)
+        {
+            push(&st1, current->left);
+        }
+
+        if (current->right != NULL)
+        {
+            push(&st1, current->right);
+        }
+    }
+
+    while (st2 != NULL)
+    {
+        struct treeNode *temp = pop(&st2);
+        printf("%d\t", temp->data);
+    }
+}
+
 int main()
 {
     // Declaring the root of the tree.
@@ -128,6 +163,9 @@ int main()
 
     printf("\ncalling inOrderTraversal function.\n");
     inOrderTraversal(root);
+
+    printf("\ncalling postOrderTraversal function.\n");
+    postOrderTraversal(root);
 
     return 0;
 }

@@ -21,6 +21,18 @@ struct node *createNode(int val)
     return temp;
 }
 
+// Function to insert a node at the end.
+void insert(struct node *root, int val)
+{
+    while (root->next != NULL)
+    {
+        root = root->next;
+    }
+    struct node *temp = createNode(val);
+    root->next = temp;
+    temp->previous = root;
+}
+
 // Function to print all element of the linked list.
 void traversal(struct node *root)
 {
@@ -37,18 +49,13 @@ void traversal(struct node *root)
 int main()
 {
     struct node *root = createNode(10);
-
-    root->next = createNode(20);
-    root->next->previous = root->next;
-
-    root->next->next = createNode(30);
-    root->next->next->previous = root->next->next;
-
-    root->next->next->next = createNode(40);
-    root->next->next->next->previous = root->next->next->next;
-
-    root->next->next->next->next = createNode(50);
-    root->next->next->next->next->previous = root->next->next->next->next;
+    insert(root, 20);
+    insert(root, 30);
+    insert(root, 40);
+    insert(root, 50);
+    insert(root, 60);
+    insert(root, 70);
+    insert(root, 80);
 
     traversal(root);
 

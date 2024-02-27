@@ -1,4 +1,4 @@
-// Program to create doubly linked list.
+// Program to reverse  the doubly linked list.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -46,6 +46,25 @@ void traversal(struct node *root)
     printf("\n");
 }
 
+// Function to reverse the linked list.
+struct node *reverse(struct node *root)
+{
+    printf("Reversing the linked list.\n");
+    struct node *temp = NULL;
+    struct node *current = root;
+
+    // swapping next and previous pointer for all nodes.
+    while (current != NULL)
+    {
+        temp = current->previous;
+        current->previous = current->next;
+        current->next = temp;
+        current = current->previous;
+    }
+
+    return (temp != NULL ? temp->previous : NULL);
+}
+
 int main()
 {
     struct node *root = createNode(10);
@@ -57,6 +76,8 @@ int main()
     insert(root, 70);
     insert(root, 80);
 
+    traversal(root);
+    root = reverse(root);
     traversal(root);
 
     return 0;

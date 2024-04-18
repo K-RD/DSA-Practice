@@ -1,5 +1,19 @@
-# DSA
-This readme contains the list of all the question whose code is written topic wise.I have practices these question during my DSA preparation.
+# Data Structures and Algorithms Practice Repository
+
+This repository contains a collection of practice questions and implementations related to various data structures and algorithms concepts. Each section is organized by topic, making it easy to navigate and practice specific areas of interest.
+
+## Table of Contents
+- [Array](#array)
+- [Linked List](#linked-list)
+  - [Singly Linked List](#singly-linked-list)
+  - [Doubly Linked List](#doubly-linked-list)
+  - [Circular Linked List](#circular-linked-list)
+- [Stack](#stack)
+- [Queue](#queue)
+- [Tree](#tree)
+- [Graph](#graph)
+- [Sorting](#sorting)
+- [Searching](#searching)
 
 ## Array
 - [x] Insertion of elements in an array.

@@ -1,5 +1,4 @@
 #include<iostream>
-#include<vector>
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -7,7 +6,7 @@ class Solution{
     public:
         int lastStoneWeight(vector<int>& stone)
         {
-            // we take two haviest stone (x & y where x<=y) and smash them 
+            // we take two heaviest stone (x & y where x<=y) and smash them 
             // this forms a new stone of (y-x if y>x) weight.
             // if x==y then both  the stones are destroyed
 

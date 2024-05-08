@@ -30,7 +30,7 @@ public:
     maxSum = sum;
     if(k==len)return maxSum;
 
-    while(right % len != k )
+    while(right % len != k-1 )
     {
         sum -= cardPoints[left];
         ++left;

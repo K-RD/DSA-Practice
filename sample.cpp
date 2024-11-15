@@ -1,11 +1,10 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include <stdio.h>
+#include <unistd.h> // Include this header for fork()
 
-int main()
-{
-	string s ;
-	cin >> s;
-	cout << "Hello "<< s << endl;
-
+int main() {
+	if (fork() || fork()) {
+		fork();
+	}
+	printf("hello\n"); // Add a newline for better output formatting
 	return 0;
 }
